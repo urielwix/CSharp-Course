@@ -63,6 +63,12 @@ namespace sapir_c23_dn_course_gil_and_david.Ex01_01
             {
                 Console.WriteLine(string.Format("Please enter a {0} digits binary number", i_RequestedLength));
                 userInput = Console.ReadLine();
+
+                if (userInput == null)
+                {
+                    userInput = "";
+                }
+
                 validInput = CheckIfHasValidSize(userInput, i_RequestedLength) && CheckIfBinary(userInput);
                 if (!validInput)
                 {
