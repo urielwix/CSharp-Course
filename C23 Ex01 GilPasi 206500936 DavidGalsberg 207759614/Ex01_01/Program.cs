@@ -8,9 +8,9 @@ namespace sapir_c23_dn_course_gil_and_david.Ex01_01
             const int k_BinaryNumbersSize = 7;
             const int k_UsersInputsCount = 3;
             float averageOnesCount = 0;
-            float avergeZeroesCount = 0;
+            float averageZeroesCount = 0;
             int quantityOfPowersOf2 = 0;
-            int qunatityOfNumbersWithAscendingDecimalRepreasantation = 0;
+            int quantityOfNumbersWithAscendingDecimalRepresentation = 0;
             int maxNumber = int.MinValue;
             int minNumber = int.MaxValue;
             const int BufferMaxSize = 50;
@@ -21,7 +21,7 @@ namespace sapir_c23_dn_course_gil_and_david.Ex01_01
                 int InputAsDecimal = BinaryToDecimal(ValidInput);
                 Console.WriteLine(string.Format("Your number as a decimal is: {0}",InputAsDecimal));
                 averageOnesCount += CountOnes(ValidInput);
-                avergeZeroesCount += CountZeroes(ValidInput);
+                averageZeroesCount += CountZeroes(ValidInput);
                 if (CheckIfIsAPowerOf2(ValidInput))
                 {
                     quantityOfPowersOf2++;
@@ -29,7 +29,7 @@ namespace sapir_c23_dn_course_gil_and_david.Ex01_01
 
                 if(CheckIfIsAscendingSequence(InputAsDecimal))
                 {
-                    qunatityOfNumbersWithAscendingDecimalRepreasantation++;
+                    quantityOfNumbersWithAscendingDecimalRepresentation++;
                 }
                 maxNumber = Max(maxNumber, InputAsDecimal);
                 minNumber = Min(minNumber, InputAsDecimal);
@@ -37,15 +37,15 @@ namespace sapir_c23_dn_course_gil_and_david.Ex01_01
             }
 
             averageOnesCount /= k_UsersInputsCount;
-            avergeZeroesCount /= k_UsersInputsCount;
+            averageZeroesCount /= k_UsersInputsCount;
             StringBuilder Stats = new StringBuilder("=== Stats ===", BufferMaxSize);
             Stats.Append(Environment.NewLine);
-            Stats.Append(string.Format("Zeroes / Ones Average : {0} / {1}", avergeZeroesCount, averageOnesCount));
+            Stats.Append(string.Format("Zeroes / Ones Average : {0} / {1}", averageZeroesCount, averageOnesCount));
             Stats.Append(Environment.NewLine);
-            Stats.Append(string.Format("There are {0} numbers which represant a power of 2", quantityOfPowersOf2));
+            Stats.Append(string.Format("There are {0} numbers which represent a power of 2", quantityOfPowersOf2));
             Stats.Append(Environment.NewLine);
-            Stats.Append(string.Format("There are {0} numbers with ascending decimal repreanstation ",
-                qunatityOfNumbersWithAscendingDecimalRepreasantation));
+            Stats.Append(string.Format("There are {0} numbers with ascending decimal representation ",
+                quantityOfNumbersWithAscendingDecimalRepresentation));
             Stats.Append(Environment.NewLine);
             Stats.Append(string.Format("The max number is {0} and the min number is {1}", maxNumber, minNumber));
 
