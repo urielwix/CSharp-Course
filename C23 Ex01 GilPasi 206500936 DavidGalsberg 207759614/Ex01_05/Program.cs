@@ -32,8 +32,8 @@ namespace sapir_c23_dn_course_gil_and_david.Ex01_05
 
             do
             {
-                input = Console.ReadLine();
-                valid = int.TryParse(input, out int parsedInput) && input.Length == 6;
+                input = Console.ReadLine() ??  "";
+                valid = int.TryParse(input, out _) && input.Length == 6;
 
                 if(!valid)
                 {
