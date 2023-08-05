@@ -5,13 +5,14 @@ namespace sapir_c23_dn_course_gil_and_david.Ex01_04
     {
         public static void Main()
         {
-            Console.WriteLine("Please enter a word or a number.It must be 8 characters long. ");
+            Console.WriteLine("Please enter a word or a number. It must be 8 characters long.");
             string userInput = GetValidInput();
             const int k_BufferSize = 50;
+            bool is_palindrome = checkIfPalindrome(userInput);
 
-            StringBuilder stringInfo = new StringBuilder("=== string analysis ===", k_BufferSize);
+            StringBuilder stringInfo = new("=== String analysis ===", k_BufferSize);
             stringInfo.Append(Environment.NewLine);
-            stringInfo.Append(string.Format("This string is a palindrome: {0}", FindIfPalindrome(userInput)));
+            stringInfo.Append(string.Format("This string is a palindrome: {0}", checkIfPalindrome(userInput)));
             stringInfo.Append(Environment.NewLine);
 
             if (int.TryParse(userInput, out int ParsedInput))
@@ -32,13 +33,13 @@ namespace sapir_c23_dn_course_gil_and_david.Ex01_04
             return i_Number % 4 == 0;
         }
 
-        public static bool FindIfPalindrome(string i_String)
+        public static bool checkIfPalindrome(string i_String)
         {
             bool result = i_String.Length < 1;
             int lastChar = i_String.Length - 1;
             if (!result)
             {
-                result = (i_String[0] == i_String[lastChar]) && FindIfPalindrome(i_String[1..lastChar]);
+                result = (i_String[0] == i_String[lastChar]) && checkIfPalindrome(i_String[1..lastChar]);
 
             }
 
@@ -52,7 +53,7 @@ namespace sapir_c23_dn_course_gil_and_david.Ex01_04
 
             do
             {
-                input = Console.ReadLine();
+                input = Console.ReadLine() ?? "";
                 valid = CheckIfValidString(input);
                 if (!valid)
                 {

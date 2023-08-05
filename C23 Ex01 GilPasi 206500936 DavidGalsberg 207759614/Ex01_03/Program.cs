@@ -19,7 +19,7 @@ namespace sapir_c23_dn_course_gil_and_david.Ex01_03
 
             do
             {
-                input = Console.ReadLine();
+                input = Console.ReadLine() ?? "";
                 valid = int.TryParse(input, out parsedInput) && parsedInput > 0;
 
                 if (!valid)

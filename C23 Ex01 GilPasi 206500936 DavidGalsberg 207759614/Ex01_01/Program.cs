@@ -5,74 +5,71 @@ namespace sapir_c23_dn_course_gil_and_david.Ex01_01
     {
         static void Main()
         {
-            const int k_BinaryNumbersSize = 7;
+            const int k_InputSize = 7;
             const int k_UsersInputsCount = 3;
-            float averageOnesCount = 0;
-            float averageZeroesCount = 0;
-            int quantityOfPowersOf2 = 0;
-            int quantityOfNumbersWithAscendingDecimalRepresentation = 0;
+            float onesCount = 0;
+            float zeroesCount = 0;
+            int powersOf2Count = 0;
+            int ascendingDecimalDigitsAmount = 0;
             int maxNumber = int.MinValue;
             int minNumber = int.MaxValue;
             const int BufferMaxSize = 50;
 
             for (int i = 0; i < k_UsersInputsCount; i++)
             {
-                string ValidInput = GetValidNumber(k_BinaryNumbersSize);
+                string ValidInput = GetBinaryNumber(k_InputSize);
                 int InputAsDecimal = BinaryToDecimal(ValidInput);
-                Console.WriteLine(string.Format("Your number as a decimal is: {0}",InputAsDecimal));
-                averageOnesCount += CountOnes(ValidInput);
-                averageZeroesCount += CountZeroes(ValidInput);
+                Console.WriteLine(string.Format("Your number as a decimal is: {0}", InputAsDecimal));
+                int onesInNumber = CountOnes(ValidInput);
+                onesCount += onesInNumber;
+                zeroesCount += k_InputSize - onesInNumber;
                 if (CheckIfIsAPowerOf2(ValidInput))
                 {
-                    quantityOfPowersOf2++;
+                    powersOf2Count++;
                 }
 
                 if(CheckIfIsAscendingSequence(InputAsDecimal))
                 {
-                    quantityOfNumbersWithAscendingDecimalRepresentation++;
+                    ascendingDecimalDigitsAmount++;
                 }
                 maxNumber = Max(maxNumber, InputAsDecimal);
                 minNumber = Min(minNumber, InputAsDecimal);
 
             }
 
-            averageOnesCount /= k_UsersInputsCount;
-            averageZeroesCount /= k_UsersInputsCount;
-            StringBuilder Stats = new StringBuilder("=== Stats ===", BufferMaxSize);
-            Stats.Append(Environment.NewLine);
-            Stats.Append(string.Format("Zeroes / Ones Average : {0} / {1}", averageZeroesCount, averageOnesCount));
-            Stats.Append(Environment.NewLine);
-            Stats.Append(string.Format("There are {0} numbers which represent a power of 2", quantityOfPowersOf2));
-            Stats.Append(Environment.NewLine);
-            Stats.Append(string.Format("There are {0} numbers with ascending decimal representation ",
-                quantityOfNumbersWithAscendingDecimalRepresentation));
-            Stats.Append(Environment.NewLine);
-            Stats.Append(string.Format("The max number is {0} and the min number is {1}", maxNumber, minNumber));
+            onesCount /= k_UsersInputsCount;
+            zeroesCount /= k_UsersInputsCount;
+            StringBuilder Data = new("=== Data ===", BufferMaxSize);
+            Data.Append(Environment.NewLine);
+            Data.Append(string.Format("Zeroes Average : {0}", zeroesCount));
+            Data.Append(Environment.NewLine);
+            Data.Append(string.Format("Ones Average : {0}", onesCount));
+            Data.Append(Environment.NewLine);
+            Data.Append(string.Format("There are {0} numbers which are a power of 2", powersOf2Count));
+            Data.Append(Environment.NewLine);
+            Data.Append(string.Format("There are {0} numbers with ascending decimal representation ",
+                ascendingDecimalDigitsAmount));
+            Data.Append(Environment.NewLine);
+            Data.Append(string.Format("The maximum number is {0} and the minimum number is {1}", maxNumber, minNumber));
 
-
-            Console.Write(Stats.ToString());
+            Console.Write(Data.ToString());
         }
 
 
-        public static string GetValidNumber(int i_RequestedLength)
+        public static string GetBinaryNumber(int i_numberLength)
         {
             bool validInput;
             string userInput;
 
             do
             {
-                Console.WriteLine(string.Format("Please enter a {0} digits binary number", i_RequestedLength));
-                userInput = Console.ReadLine();
+                Console.WriteLine(string.Format("Enter a {0} digits binary number", i_numberLength));
+                userInput = Console.ReadLine() ?? "";
 
-                if (userInput == null)
-                {
-                    userInput = "";
-                }
-
-                validInput = CheckIfHasValidSize(userInput, i_RequestedLength) && CheckIfBinary(userInput);
+                validInput = CheckIfHasValidSize(userInput, i_numberLength) && CheckIfBinary(userInput);
                 if (!validInput)
                 {
-                    Console.WriteLine("Invalid input");
+                    Console.WriteLine("Invalid input, try again");
                 }
             }
             while (!validInput);
@@ -87,39 +84,31 @@ namespace sapir_c23_dn_course_gil_and_david.Ex01_01
 
         public static bool CheckIfBinary(string i_NumberAsString)
         {
-            bool result = true;
-            for (int i = 0; i < i_NumberAsString.Length && result; i++)
+            bool isBinary = true;
+            foreach (char digit in i_NumberAsString)
             {
-                result = i_NumberAsString[i] == '0' || i_NumberAsString[i] == '1';
+                isBinary = digit == '0' || digit == '1';
+                if (!isBinary) break;
             }
 
-            return result;
+            return isBinary;
         }
 
-        public static int BinaryToDecimal(string i_BinaryNumberAsString)
+        public static int BinaryToDecimal(string i_BinaryNumberString)
         {
 
-            int numberAsDecimal = 0;
-            int radix = 1;
+            int decimalValue = 0;
+            int power = 6;
 
-            for (int i = i_BinaryNumberAsString.Length - 1; i >= 0; i--)
+            foreach (char digitChar in i_BinaryNumberString)
             {
+                int digit = digitChar - '0';
 
-                if (i_BinaryNumberAsString[i] == '1')
-                {
-                    numberAsDecimal += radix;
-                }
-
-                radix *= 2;
+                decimalValue += digit * (int)Math.Pow(2, power);
+                power--;
             }
 
-            return numberAsDecimal;
-        }
-
-        public static int CountZeroes(string i_BinaryString)
-        {
-            return i_BinaryString.Length - CountOnes(i_BinaryString);
-            //In a binary format any character that is not 1 is necessarily 0.
+            return decimalValue;
         }
 
         public static int CountOnes(string i_BinaryString)
@@ -140,7 +129,7 @@ namespace sapir_c23_dn_course_gil_and_david.Ex01_01
         public static bool CheckIfIsAPowerOf2(string i_BinaryNumber)
         {
             return CountOnes(i_BinaryNumber) == 1;
-            //A power of 2 has only one digit of 1 due to the binary format structure.
+            // A power of 2 in binary format consists of only a single '1' digit.
         }
 
         public static bool CheckIfIsAscendingSequence(int i_Number)

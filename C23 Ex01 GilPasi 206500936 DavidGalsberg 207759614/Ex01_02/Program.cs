@@ -5,34 +5,34 @@
     {
         public static void Main()
         {
-            const int k_RequiredHeight = 5;
+            const int k_HourglassHeight = 5;
 
-            PrintHourglass(k_RequiredHeight);
+            PrintHourglass(k_HourglassHeight);
 
         }
 
         public static void PrintHourglass(int i_RequestedHeight)
         {
-            int inferedHeight = i_RequestedHeight + ((i_RequestedHeight + 1) % 2);
+            int inferredHeight = i_RequestedHeight + ((i_RequestedHeight + 1) % 2);
 
-            PrintHourglass(inferedHeight, inferedHeight);
+            PrintHourglass(inferredHeight, inferredHeight);
         }
 
         public static void PrintHourglass(int i_RowSize, int i_MaxRow)
         {
             if (i_RowSize > 2)
             {
-                //Upper triangle start
+                //Upper triangle 
                 PrintSpaces((i_MaxRow - i_RowSize) / 2);
                 PrintStars(i_RowSize);
                 Console.WriteLine("");
-                //Upper triangle end
+    
                 PrintHourglass(i_RowSize - 2, i_MaxRow);
-                //Lower triangle start
+                
+                //Lower triangle 
                 PrintSpaces((i_MaxRow - i_RowSize) / 2);
                 PrintStars(i_RowSize);
                 Console.WriteLine("");
-                //Lower triangle end
             }
             else
             {
@@ -43,17 +43,17 @@
 
         }
 
-        public static void PrintSpaces(int count)
+        public static void PrintSpaces(int i_count)
         {
-            for (int i = 0; i < count; i++)
+            for (int i = 0; i < i_count; i++)
             {
                 Console.Write(" ");
             }
         }
 
-        public static void PrintStars(int count)
+        public static void PrintStars(int i_count)
         {
-            for (int i = 0; i < count; i++)
+            for (int i = 0; i < i_count; i++)
             {
                 Console.Write("*");
             }
