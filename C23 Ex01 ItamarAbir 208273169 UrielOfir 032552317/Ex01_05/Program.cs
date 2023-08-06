@@ -14,7 +14,7 @@ namespace sapir_c23_dn_course_gil_and_david.Ex01_05
             StringBuilder numberInfo = new ("=== Number Stats ===", k_BufferSize);
             numberInfo.Append(Environment.NewLine);
             numberInfo.Append(string.Format(
-                "There are {0} digits that are greater than the ones digit", CountDigitsThatAreGreaterThenTheOnesDigit(userInput)));
+                "There are {0} digits that are greater than the ones digit", DigitsGreaterTheUnitsDigitAmout(userInput)));
             numberInfo.Append(Environment.NewLine);
             numberInfo.Append(string.Format("Minimum digit is {0}", FindMinimumDigit(userInput)));
             numberInfo.Append(Environment.NewLine);
@@ -45,7 +45,7 @@ namespace sapir_c23_dn_course_gil_and_david.Ex01_05
             return input;
         }
 
-        public static int CountDigitsThatAreGreaterThenTheOnesDigit(string i_NumberAsString)
+        public static int DigitsGreaterTheUnitsDigitAmout(string i_NumberAsString)
         {
             int counter = 0;
             char onesDigit = i_NumberAsString[i_NumberAsString.Length - 1];

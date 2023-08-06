@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/urielo/projects/CSharp-Course/C23 Ex01 GilPasi 206500936 DavidGalsberg 207759614/Ex01_03/Ex01_03.csproj": {}
+    "/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_03/Ex01_03.csproj": {}
   },
   "projects": {
-    "/Users/urielo/projects/CSharp-Course/C23 Ex01 GilPasi 206500936 DavidGalsberg 207759614/Ex01_02/Ex01_02.csproj": {
+    "/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_02/Ex01_02.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/urielo/projects/CSharp-Course/C23 Ex01 GilPasi 206500936 DavidGalsberg 207759614/Ex01_02/Ex01_02.csproj",
+        "projectUniqueName": "/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_02/Ex01_02.csproj",
         "projectName": "Ex01_02",
-        "projectPath": "/Users/urielo/projects/CSharp-Course/C23 Ex01 GilPasi 206500936 DavidGalsberg 207759614/Ex01_02/Ex01_02.csproj",
+        "projectPath": "/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_02/Ex01_02.csproj",
         "packagesPath": "/Users/urielo/.nuget/packages/",
-        "outputPath": "/Users/urielo/projects/CSharp-Course/C23 Ex01 GilPasi 206500936 DavidGalsberg 207759614/Ex01_02/obj/",
+        "outputPath": "/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_02/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/urielo/.nuget/NuGet/NuGet.Config"
@@ -57,14 +57,14 @@
         }
       }
     },
-    "/Users/urielo/projects/CSharp-Course/C23 Ex01 GilPasi 206500936 DavidGalsberg 207759614/Ex01_03/Ex01_03.csproj": {
+    "/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_03/Ex01_03.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/urielo/projects/CSharp-Course/C23 Ex01 GilPasi 206500936 DavidGalsberg 207759614/Ex01_03/Ex01_03.csproj",
+        "projectUniqueName": "/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_03/Ex01_03.csproj",
         "projectName": "Ex01_03",
-        "projectPath": "/Users/urielo/projects/CSharp-Course/C23 Ex01 GilPasi 206500936 DavidGalsberg 207759614/Ex01_03/Ex01_03.csproj",
+        "projectPath": "/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_03/Ex01_03.csproj",
         "packagesPath": "/Users/urielo/.nuget/packages/",
-        "outputPath": "/Users/urielo/projects/CSharp-Course/C23 Ex01 GilPasi 206500936 DavidGalsberg 207759614/Ex01_03/obj/",
+        "outputPath": "/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_03/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/urielo/.nuget/NuGet/NuGet.Config"
@@ -79,8 +79,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/urielo/projects/CSharp-Course/C23 Ex01 GilPasi 206500936 DavidGalsberg 207759614/Ex01_02/Ex01_02.csproj": {
-                "projectPath": "/Users/urielo/projects/CSharp-Course/C23 Ex01 GilPasi 206500936 DavidGalsberg 207759614/Ex01_02/Ex01_02.csproj"
+              "/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_02/Ex01_02.csproj": {
+                "projectPath": "/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_02/Ex01_02.csproj"
               }
             }
           }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/urielo/projects/CSharp-Course/C23 Ex01 GilPasi 206500936 DavidGalsberg 207759614/Ex01_01/Ex01_01.csproj",
+      "projectUniqueName": "/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_01/Ex01_01.csproj",
       "projectName": "Ex01_01",
-      "projectPath": "/Users/urielo/projects/CSharp-Course/C23 Ex01 GilPasi 206500936 DavidGalsberg 207759614/Ex01_01/Ex01_01.csproj",
+      "projectPath": "/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_01/Ex01_01.csproj",
       "packagesPath": "/Users/urielo/.nuget/packages/",
-      "outputPath": "/Users/urielo/projects/CSharp-Course/C23 Ex01 GilPasi 206500936 DavidGalsberg 207759614/Ex01_01/obj/",
+      "outputPath": "/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_01/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/urielo/.nuget/NuGet/NuGet.Config"
