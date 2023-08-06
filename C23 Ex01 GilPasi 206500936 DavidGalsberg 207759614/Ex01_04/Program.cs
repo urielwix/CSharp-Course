@@ -18,7 +18,6 @@ namespace sapir_c23_dn_course_gil_and_david.Ex01_04
             if (int.TryParse(userInput, out int ParsedInput))
             {
                 bool isDivisibleBy4 = ParsedInput % 4 == 0;
-                Console.WriteLine(ParsedInput % 4);
                 stringInfo.Append(string.Format("This number is divisible by 4: {0} ", isDivisibleBy4));
             }
             else
