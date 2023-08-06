@@ -1,4 +1,4 @@
-﻿namespace sapir_c23_dn_course_gil_and_david.Ex01_02
+﻿namespace sapir_c23_dn_course_itamar_and_uriel.Ex01_02
 {
 
     public class HourglassPrinter
