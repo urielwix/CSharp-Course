@@ -1,0 +1,15 @@
+/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_05/bin/Debug/net6.0/Ex01_05
+/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_05/bin/Debug/net6.0/Ex01_05.deps.json
+/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_05/bin/Debug/net6.0/Ex01_05.runtimeconfig.json
+/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_05/bin/Debug/net6.0/Ex01_05.dll
+/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_05/bin/Debug/net6.0/Ex01_05.pdb
+/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_05/obj/Debug/net6.0/Ex01_05.csproj.AssemblyReference.cache
+/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_05/obj/Debug/net6.0/Ex01_05.GeneratedMSBuildEditorConfig.editorconfig
+/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_05/obj/Debug/net6.0/Ex01_05.AssemblyInfoInputs.cache
+/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_05/obj/Debug/net6.0/Ex01_05.AssemblyInfo.cs
+/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_05/obj/Debug/net6.0/Ex01_05.csproj.CoreCompileInputs.cache
+/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_05/obj/Debug/net6.0/Ex01_05.dll
+/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_05/obj/Debug/net6.0/refint/Ex01_05.dll
+/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_05/obj/Debug/net6.0/Ex01_05.pdb
+/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_05/obj/Debug/net6.0/Ex01_05.genruntimeconfig.cache
+/Users/urielo/projects/CSharp-Course/C23 Ex01 ItamarAbir 208273169 UrielOfir 032552317/Ex01_05/obj/Debug/net6.0/ref/Ex01_05.dll

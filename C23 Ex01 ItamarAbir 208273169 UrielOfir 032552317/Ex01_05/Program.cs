@@ -1,6 +1,5 @@
 ﻿using System.Text;
-using sapir_c23_dn_course_gil_and_david;
-namespace sapir_c23_dn_course_gil_and_david.Ex01_05
+namespace sapir_c23_dn_course_itamar_and_uriel.Ex01_05
 {
     public class Program
     {
@@ -11,16 +10,16 @@ namespace sapir_c23_dn_course_gil_and_david.Ex01_05
             Console.WriteLine("Please enter a 6 digits long number");
             string userInput = GetValidInput();
 
-            StringBuilder numberInfo = new ("=== Number Stats ===", k_BufferSize);
+            StringBuilder numberInfo = new ("=== Number Data ===", k_BufferSize);
             numberInfo.Append(Environment.NewLine);
             numberInfo.Append(string.Format(
-                "There are {0} digits that are greater than the ones digit", DigitsGreaterTheUnitsDigitAmout(userInput)));
+                "There are {0} digits that are greater than the units digit", GetDigitsGreaterThenUnitsDigitAmount(userInput)));
             numberInfo.Append(Environment.NewLine);
-            numberInfo.Append(string.Format("Minimum digit is {0}", FindMinimumDigit(userInput)));
+            numberInfo.Append(string.Format("Minimum digit is {0}", GetMinDigit(userInput)));
             numberInfo.Append(Environment.NewLine);
-            numberInfo.Append(string.Format("There are {0} digits that are divisible by 3", CountMultiplesOf3(userInput)));
+            numberInfo.Append(string.Format("There are {0} digits divided by 3", GetDividedBy3Amount(userInput)));
             numberInfo.Append(Environment.NewLine);
-            numberInfo.Append(string.Format("The digits average is {0}", CalculateDigitsAverage(userInput)));
+            numberInfo.Append(string.Format("The digits average is {0}", GetDigitsAverage(userInput)));
             numberInfo.Append(Environment.NewLine);
             Console.WriteLine(numberInfo.ToString());
         }
@@ -45,60 +44,60 @@ namespace sapir_c23_dn_course_gil_and_david.Ex01_05
             return input;
         }
 
-        public static int DigitsGreaterTheUnitsDigitAmout(string i_NumberAsString)
+        public static int GetDigitsGreaterThenUnitsDigitAmount(string i_NumberAsString)
         {
-            int counter = 0;
-            char onesDigit = i_NumberAsString[i_NumberAsString.Length - 1];
+            int DigitsGreaterThenUnitsDigitAmount = 0;
+            char unitsDigit = i_NumberAsString[^1];
 
-            for( int i = 1; i < i_NumberAsString.Length; i++)
+            foreach(char digit in i_NumberAsString)
             {
-                if( i_NumberAsString[i] > onesDigit)
+                if(digit > unitsDigit)
                 {
-                    counter++;
+                    DigitsGreaterThenUnitsDigitAmount++;
                 }
             }
 
-            return counter;
+            return DigitsGreaterThenUnitsDigitAmount;
         }
 
-        public static char FindMinimumDigit(string i_NumberAsString)
+        public static char GetMinDigit(string i_NumberAsString)
         {
             char minChar = '9';
 
-            for(int i = 0; i < i_NumberAsString.Length; i++)
+            foreach(char digit in i_NumberAsString)
             {
-                minChar = minChar < i_NumberAsString[i] ? minChar : i_NumberAsString[i];
+                minChar = minChar < digit ? minChar : digit;
             }
             return minChar;
         }
 
-        public static int CountMultiplesOf3(string i_NumberAsString)
+        public static int GetDividedBy3Amount(string i_NumberAsString)
         {
-            int counter = 0;
+            int DividedBy3Amount = 0;
 
-            for(int i = 0; i < i_NumberAsString.Length; i++)
+            foreach(char digit in i_NumberAsString)
             {
-                int parsedDigit = int.Parse(i_NumberAsString[i].ToString());
+                int parsedDigit = int.Parse(digit.ToString());
                 if (parsedDigit % 3 == 0)
                 {
-                    counter++;
+                    DividedBy3Amount++;
                 }
             }
 
-            return counter;
+            return DividedBy3Amount;
         }
 
-        public static float CalculateDigitsAverage(string i_NumberAsString)
+        public static float GetDigitsAverage(string i_NumberAsString)
         {
-            float average = 0;
+            float totalSum = 0;
 
-            for (int i = 0; i < i_NumberAsString.Length; i++)
+            foreach(char digit in i_NumberAsString)
             {
-                int ParsedDigit = int.Parse(i_NumberAsString[i].ToString());
-                average += ParsedDigit;
+                int ParsedDigit = int.Parse(digit.ToString());
+                totalSum += ParsedDigit;
             }
 
-            average /= i_NumberAsString.Length;
+            float average = totalSum / i_NumberAsString.Length;
 
             return average;
         }
